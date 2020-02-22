@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 
 class DecisionTreeBuilder {
@@ -8,7 +9,7 @@ class DecisionTreeBuilder {
 
         int classifyIndex = attributes.length - 1;
 
-        double bestIG = -1;
+        double bestGR = -1;
         String bestAttribute = "";
 
         if (classifyIndex == 0) {
@@ -17,6 +18,14 @@ class DecisionTreeBuilder {
             newVariant.setVariantFollowed(table[1][0]);
             decisionTreeNode.getPossibleVariants().add(newVariant);
             return;
+        }
+
+        HashMap<String, HashMap<String, Double>> entropies = new HashMap();
+        HashMap<String, HashMap<String, String>> entropiesAnswer = new HashMap();
+
+        for (int i = 0; i < classifyIndex; i++) {
+            entropies.put(attributes[i], new HashMap<>());
+            entropiesAnswer.put(attributes[i], new HashMap<>());
         }
 
         for (int i = 0; i < classifyIndex; i++) {
@@ -54,20 +63,33 @@ class DecisionTreeBuilder {
             double IEbefore = 0;
             int yesAmount = 0;
             int noAmount = 0;
+            double variantIV = 0;
 
             for (int j = 0; j < variantsAmount; j++) {
                 String[] variantInfo = selectedAttributeVariants[j].split(" ");
                 int timesAmount = Integer.parseInt(variantInfo[1]) + Integer.parseInt(variantInfo[2]);
                 yesAmount += Integer.parseInt(variantInfo[1]);
                 noAmount += Integer.parseInt(variantInfo[2]);
+
                 double yesDivision = Double.parseDouble(variantInfo[1]) / (double) timesAmount;
                 double noDivision = Double.parseDouble(variantInfo[2]) / (double) timesAmount;
+
+                variantIV += ((double) timesAmount / (double) (tableHeight - 1)) * ((Math.log10(((double) timesAmount) / (double) (tableHeight - 1))) / Math.log10(2));
+
                 double variantIE = -yesDivision * (Math.log10(yesDivision) / Math.log10(2)) - noDivision * (Math.log10(noDivision) / Math.log10(2));
+
                 if (Double.isNaN(variantIE)) {
                     variantIE = 0;
                 }
+
+                entropies.get(selectedAttribute).put(variantInfo[0], variantIE);
+                if (variantIE == 0) {
+                    entropiesAnswer.get(selectedAttribute).put(variantInfo[0], " ");
+                }
+
                 double examplesAmount = tableHeight - 1;
                 double partedGeneralVariantIE = ((double) timesAmount / examplesAmount) * variantIE;
+
                 IEafter += partedGeneralVariantIE;
                 if (j == variantsAmount - 1) {
                     yesDivision = (double) yesAmount / examplesAmount;
@@ -80,10 +102,31 @@ class DecisionTreeBuilder {
             }
 
             double variantIG = IEbefore - IEafter;
+            double gain_ratio = variantIG / (-variantIV);
 
-            if (bestIG < variantIG) {
-                bestIG = variantIG;
+            if (Double.isNaN(gain_ratio)) {
+                gain_ratio = 0;
+            }
+
+            if (bestGR < gain_ratio) {
+                bestGR = gain_ratio;
                 bestAttribute = selectedAttribute;
+            }
+        }
+
+        for (String attribute: entropiesAnswer.keySet().toArray(new String[0])) {
+            for (int i = 0; i < tableWidth; i++) {
+                if (table[0][i].equals(attribute)) {
+                    for (String variant: entropiesAnswer.get(attribute).keySet().toArray(new String[0])) {
+                        for (int k = 0; k < tableHeight; k++) {
+                            if (table[k][i].equals(variant)) {
+                                String answer = table[k][classifyIndex];
+                                entropiesAnswer.get(attribute).put(variant, answer);
+                                break;
+                            }
+                        }
+                    }
+                }
             }
         }
 
@@ -109,6 +152,20 @@ class DecisionTreeBuilder {
 
         for (int j = 0; j < variantsAmount; j++) {
             String[] variant = selectedAttributeVariants[j].split(" ");
+
+            if (entropies.get(bestAttribute).get(variant[0]) == 0) {
+                DecisionTreeNode newVariant = new DecisionTreeNode();
+                newVariant.setAttributeName("Play");
+                newVariant.setVariantFollowed(variant[0]);
+
+                DecisionTreeNode newVariantAnswer = new DecisionTreeNode();
+                newVariantAnswer.setAttributeName(null);
+                newVariantAnswer.setVariantFollowed(entropiesAnswer.get(bestAttribute).get(variant[0]));
+                newVariant.getPossibleVariants().add(newVariantAnswer);
+                decisionTreeNode.getPossibleVariants().add(newVariant);
+                continue;
+            }
+
             DecisionTreeNode newVariant = new DecisionTreeNode();
             newVariant.setVariantFollowed(variant[0]);
             decisionTreeNode.getPossibleVariants().add(newVariant);
