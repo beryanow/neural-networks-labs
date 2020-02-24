@@ -7,6 +7,6 @@ public class Main {
         String[][] table = dataParser.getTable(attributes);
 
         GainRatioEvaluator gainRatioEvaluator = new GainRatioEvaluator();
-        gainRatioEvaluator.evaluateGainRatio(table, attributes);
+        gainRatioEvaluator.evaluateGainRatio(table);
     }
 }
