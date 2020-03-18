@@ -375,125 +375,126 @@ N/A | 12.70 | 200.00 | 102.14 | 102.23 | 66.00 | N/A | N/A | 48.37 | 479.10 | 80
 - **Resulted** sigmoid value (G_Total): 0.586985378410324
 - **Resulted** sigmoid value (КГФ): 0.5398373563741578
 - **Error**: 8.887344486266895E-4
-
+---
 - **Expected** sigmoid value (G_Total): 0.5099986668799655
 - **Expected** sigmoid value (КГФ): 0.6058736684317606
 - **Resulted** sigmoid value (G_Total): 0.5054854078249869
 - **Resulted** sigmoid value (КГФ): 0.5862458142809834
 - **Error**: 2.028110829307638E-4
-
+---
 - **Expected** sigmoid value (КГФ): 0.5547792351072148
 - **Resulted** sigmoid value (КГФ): 0.5689130804250103
 - **Error**: 9.988279173368475E-5
-
+---
 - **Expected** sigmoid value (КГФ): 0.5448788923735801
 - **Resulted** sigmoid value (КГФ): 0.5556095731306332
 - **Error**: 5.757375475489462E-5
-
+---
 - **Expected** sigmoid value (КГФ): 0.5374298453437496
 - **Resulted** sigmoid value (КГФ): 0.5395746738292211
 - **Error**: 2.3001446160449498E-6
-
+---
 - **Expected** sigmoid value (КГФ): 0.5299640517645717
 - **Resulted** sigmoid value (КГФ): 0.5380079265504832
 - **Error**: 3.2351960785711464E-5
-
+---
 - **Expected** sigmoid value (G_Total): 0.6984652160025387
 - **Expected** sigmoid value (КГФ): 0.6524894621927444
 - **Resulted** sigmoid value (G_Total): 0.6905502398924502
 - **Resulted** sigmoid value (КГФ): 0.6321000114942843
 - **Error**: 2.3918827330410346E-4
-
+---
 - **Expected** sigmoid value (G_Total): 0.7310585786300049
 - **Expected** sigmoid value (КГФ): 0.6456563062257954
 - **Resulted** sigmoid value (G_Total): 0.7109730082149387
 - **Resulted** sigmoid value (КГФ): 0.6353791317990632
 - **Error**: 2.545252265480299E-4
-
+---
 - **Expected** sigmoid value (G_Total): 0.6899744811276125
 - **Expected** sigmoid value (КГФ): 0.6502185485738271
 - **Resulted** sigmoid value (G_Total): 0.6953642978413083
 - **Resulted** sigmoid value (КГФ): 0.6343486273594912
 - **Error**: 1.4045226177823215E-4
-
+---
 - **Expected** sigmoid value (G_Total): 0.610639233949222
 - **Expected** sigmoid value (КГФ): 0.6502185485738271
 - **Resulted** sigmoid value (G_Total): 0.6284261112804091
 - **Resulted** sigmoid value (КГФ): 0.6090712559431994
 - **Error**: 0.0010047363480126018
-
+---
 - **Expected** sigmoid value (G_Total): 0.5547792351072148
 - **Expected** sigmoid value (КГФ): 0.6201064323430902
 - **Resulted** sigmoid value (G_Total): 0.5466097103962886
 - **Resulted** sigmoid value (КГФ): 0.5919307656356902
 - **Error**: 4.3030466420445896E-4
-
+---
 - **Expected** sigmoid value (G_Total): 0.5914589784327801
 - **Expected** sigmoid value (КГФ): 0.6082590307465143
 - **Resulted** sigmoid value (G_Total): 0.5867225998458682
 - **Resulted** sigmoid value (КГФ): 0.5885673624984509
 - **Error**: 2.0509754025517396E-4
-
+---
 - **Expected** sigmoid value (КГФ): 0.5841905229354074
 - **Resulted** sigmoid value (КГФ): 0.5354176870179492
 - **Error**: 0.0011893947617156494
-
+---
 - **Expected** sigmoid value (КГФ): 0.5670929049654543
 - **Resulted** sigmoid value (КГФ): 0.5661692418499316
 - **Error**: 4.265767754885702E-7
-
+---
 - **Expected** sigmoid value (КГФ): 0.5473576181430894
 - **Resulted** sigmoid value (КГФ): 0.5413524017745499
 - **Error**: 1.803131181648711E-5
-
+---
 - **Expected** sigmoid value (КГФ): 0.5374298453437496
 - **Resulted** sigmoid value (КГФ): 0.5188479244800501
 - **Error**: 1.7264389149239493E-4
-
+---
 - **Expected** sigmoid value (КГФ): 0.5274723043445937
 - **Resulted** sigmoid value (КГФ): 0.5089330499209697
 - **Error**: 1.718519772919316E-4
-
+---
 - **Expected** sigmoid value (КГФ): 0.52497918747894
 - **Resulted** sigmoid value (КГФ): 0.4989382978050021
 - **Error**: 3.3906396750510323E-4
-
+---
 - **Expected** sigmoid value (КГФ): 0.5224848247918001
 - **Resulted** sigmoid value (КГФ): 0.5059259192234729
 - **Error**: 1.3709867681039022E-4
-
+---
 - **Expected** sigmoid value (КГФ): 0.5199893401555818
 - **Resulted** sigmoid value (КГФ): 0.4988086847209033
 - **Error**: 2.243100823212893E-4
-
+---
 - **Expected** sigmoid value (КГФ): 0.5199893401555818
 - **Resulted** sigmoid value (КГФ): 0.502379414236472
 - **Error**: 1.5505474543826782E-4
-
+---
 - **Expected** sigmoid value (КГФ): 0.5074994375506203
 - **Resulted** sigmoid value (КГФ): 0.48690714909784294
 - **Error**: 2.1202117186119442E-4
-
+---
 - **Expected** sigmoid value (КГФ): 0.5
 - **Resulted** sigmoid value (КГФ): 0.5883463910297924
 - **Error**: 0.0039025424039944878
-
+---
 - **Expected** sigmoid value (КГФ): 0.5793242521487495
 - **Resulted** sigmoid value (КГФ): 0.5846332509006271
 - **Error**: 1.409273387371909E-5
-
+---
 - **Expected** sigmoid value (КГФ): 0.5621765008857981
 - **Resulted** sigmoid value (КГФ): 0.5623040488288772
 - **Error**: 8.134238891857272E-9
-
+---
 - **Expected** sigmoid value (КГФ): 0.5547792351072148
 - **Resulted** sigmoid value (КГФ): 0.5544744976334026
 - **Error**: 4.643246397272401E-8
-
+---
 - **Expected** sigmoid value (КГФ): 0.5473576181430894
 - **Resulted** sigmoid value (КГФ): 0.5629978239884611
 - **Error**: 1.223080194428001E-4
-
+---
 - **Expected** sigmoid value (КГФ): 0.5646362918030292
 - **Resulted** sigmoid value (КГФ): 0.5612281963244383
 - **Error**: 5.807557395595831E-6
+
