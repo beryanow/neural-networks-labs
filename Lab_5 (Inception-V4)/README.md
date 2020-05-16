@@ -3,7 +3,7 @@
 ### На 30 эпохах получаем accuracy ~93%
 
 ## Блок Stem
-![]()
+![](https://github.com/beryanow/neural_networks_labs/blob/master/Lab_5%20(Inception-V4)/images/Stem%20Block.png?raw=true)
 
 ## Блок Inception-A
 ![](https://github.com/beryanow/neural_networks_labs/blob/master/Lab_5%20(Inception-V4)/images/Inception-A%20Block.png?raw=true)
