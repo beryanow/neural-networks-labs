@@ -23,3 +23,5 @@
 ## Тренировочные результаты (для каждой эпохи)
 ![](https://github.com/beryanow/neural_networks_labs/blob/master/Lab_5%20(Inception-V4)/images/Training%20Logs.png?raw=true)
 
+## Пример предсказания
+![](https://github.com/beryanow/neural_networks_labs/blob/master/Lab_5%20(Inception-V4)/images/Prediction%20Example.png?raw=true)
