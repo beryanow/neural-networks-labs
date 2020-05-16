@@ -1,6 +1,6 @@
 # Inception-V4 CIFAR-10
 
-### На 30 эпохах получаем accuracy ~93%
+### На 30 эпохах получаем accuracy ~93% (вероятно, можно получить ещё более высокую точность путём обучения на большем количестве эпох)
 
 ## Блок Stem
 ![](https://github.com/beryanow/neural_networks_labs/blob/master/Lab_5%20(Inception-V4)/images/Stem%20Block.png?raw=true)
