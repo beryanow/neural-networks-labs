@@ -1,9 +1,9 @@
 # LSTM HMDB51
 
-## Обработка dataset
+## Обработка HMDB51
 ![](https://github.com/beryanow/neural_networks_labs/blob/master/Lab_6%20(LSTM)/images/generate_data.png?raw=true)
 
-## Развёртка dataset
+## Развёртка HMDB51
 ![](https://github.com/beryanow/neural_networks_labs/blob/master/Lab_6%20(LSTM)/images/load_data.png?raw=true)
 
 ## Модель LSTM
